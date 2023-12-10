@@ -17,7 +17,7 @@
     padding: 0 7%;
 }
 
-.login-type-btn {
+/* .login-type-btn {
     border-radius: 15px;
     border: none;
     margin: 2% 0;
@@ -43,6 +43,86 @@
 .login-type-btn:disabled:hover {
     background-color: #00bd7a;
     box-shadow: 0 0 5px #00bd7a;
+} */
+
+.login-type-btn,
+.login-type-btn *,
+.login-type-btn :after,
+.login-type-btn :before,
+.login-type-btn:after,
+.login-type-btn:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.login-type-btn {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 1% 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.login-type-btn:disabled {
+  cursor: default;
+}
+.login-type-btn:-moz-focusring {
+  outline: auto;
+}
+.login-type-btn [hidden] {
+  display: none;
+}
+.login-type-btn {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.login-type-btn span {
+  mix-blend-mode: difference;
+}
+.login-type-btn:after,
+.login-type-btn:before {
+  --tilt: 1.2rem;
+  background: #fff;
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 100%,
+    0 100%
+  );
+  clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 100%, 0 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: calc(-100% - var(--tilt));
+  position: absolute;
+  top: 0;
+  transform: translateX(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: calc(100% + var(--tilt));
+}
+.login-type-btn:after {
+  left: 100%;
+  transform: translateX(var(--progress, 0)) rotate(180deg);
+  z-index: -1;
+}
+.login-type-btn:hover:before {
+  --progress: 100%;
+}
+.login-type-btn:hover:after {
+  --progress: -100%;
 }
 
 .login-card-mojang {
@@ -90,20 +170,32 @@
 }
 
 .login-btn {
-    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
     border: none;
-    margin: 2% 0;
-    height: 2em;
-    background-color: #00bd7a;
-    box-shadow: 0 0 5px #00bd7a;
-    color: #121212;
-    font: normal normal bold 19px/29px Poppins;
+    background: none;
+    font-weight: 600;
+    margin: 15px 0;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
-.login-btn:hover {
-    background-color: #006e47;
-    box-shadow: 0 0 5px #006e47;
+.login-btn::before {
+    margin-left: auto;
+}
+
+.login-btn::after, .login-btn::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    transition: 0.5s;
+}
+
+.login-btn:hover::after, .login-btn:hover::before {
+    width: 100%;
 }
 
 .cancel {
@@ -112,10 +204,14 @@
     color: #F1F1F1;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+    
 }
 
 .cancel:hover {
     color: #373737;
+    transition: all 0.3s ease-in-out;
 }
 
 .cancel:hover:disabled {

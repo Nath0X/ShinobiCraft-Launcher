@@ -32,7 +32,8 @@ function createWindow() {
         show: false,
         webPreferences: {
             contextIsolation: false,
-            nodeIntegration: true
+            nodeIntegration: true,
+            devTools: false
         },
     });
     electron.Menu.setApplicationMenu(null);

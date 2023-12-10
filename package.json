@@ -1,18 +1,18 @@
 {
-    "name": "Selvania-Launcher",
-    "preductname": "Selvania Launcher",
-    "version": "1.3.5",
-    "description": "Launcher Mincraft custom (crack, premium)",
+    "name": "ShinobiCraft-Launcher",
+    "preductname": "ShinobiCraft Launcher",
+    "version": "1.0.0",
+    "description": "Launcher officiel du serveur ShinobiCraft (RP)",
     "main": "src/app.js",
-    "author": "Luuxis",
-    "url": "http://launcher.luuxis.fr/launcherSelvania",
+    "author": "Nath0X, Luuxis",
+    "url": "https://launcher.shinobicraftrp.fr",
     "engines": {
         "node": ">18.x.x"
     },
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "build": "node build.js --build",
-        "icon": "node build.js --icon=https://raw.githubusercontent.com/luuxis/Selvania-Launcher/master/src/assets/images/icon.png",
+        "icon": "node build.js --icon=https://raw.githubusercontent.com/Nath0X/ShinobiCraft-Launcher/master/src/assets/images/icon.png",
         "dev": "nodemon --exec npm start"
     },
     "license": "CC0",
@@ -34,6 +34,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/luuxis/Selvania-Launcher.git"
+        "url": "git+https://github.com/Nath0X/ShinobiCraft-Launcher.git"
     }
 }

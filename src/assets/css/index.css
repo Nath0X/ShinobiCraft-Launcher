@@ -14,12 +14,13 @@ img {
 
 .splash {
     position: absolute;
-    top: 180px;
+    top: 150px;
     left: 50%;
     transform: translate(-50%);
     width: 140px;
     height: 140px;
-    transition: opacity .3s, top 1.5s;
+    transition: opacity .3s;
+    animation: spin 3s infinite linear;
     opacity: 0;
 }
 
@@ -27,11 +28,16 @@ img {
     opacity: 1;
 }
 
-.splash.translate {
-    top: 129px;
-}
+@keyframes spin{
+    0% {
+      transform: translate(-50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%) rotateZ(360deg);
+    }
+  }
 
-.splash-message {
+/* .splash-message {
     position: absolute;
     top: 289px;
     left: 0px;
@@ -66,7 +72,7 @@ img {
 
 .splash-author.opacity {
     opacity: 1;
-}
+} */
 
 .message {
     position: absolute;

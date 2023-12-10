@@ -25,7 +25,7 @@ class Login {
         this.loginMojang();
         document.querySelector('.cancel-login').addEventListener("click", () => {
             document.querySelector(".cancel-login").style.display = "none";
-            changePanel("settings");
+            changePanel("comptes");
         })
     }
 
@@ -37,7 +37,7 @@ class Login {
         this.loginOffline();
         document.querySelector('.cancel-login').addEventListener("click", () => {
             document.querySelector(".cancel-login").style.display = "none";
-            changePanel("settings");
+            changePanel("comptes");
         })
     }
 
@@ -184,11 +184,18 @@ class Login {
 
     async loginOffline() {
         let mailInput = document.querySelector('.Mail')
+        let mailText = document.querySelector('.MailText')
+        let passwordText = document.querySelector('.PasswordText')
         let passwordInput = document.querySelector('.Password')
         let cancelMojangBtn = document.querySelector('.cancel-mojang')
         let infoLogin = document.querySelector('.info-login')
         let loginBtn = document.querySelector(".login-btn")
         let mojangBtn = document.querySelector('.mojang')
+
+        passwordInput.disabled = true;
+        passwordInput.hidden = true;
+        mailText.innerHTML = "Pseudo";
+        passwordText.hidden = true;
 
         mojangBtn.innerHTML = "Offline"
 
