@@ -7,7 +7,7 @@
     "author": "Nath0X, Luuxis",
     "url": "https://launcher.shinobicraftrp.fr",
     "engines": {
-        "node": ">18.x.x"
+        "node": "^18.x.x"
     },
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
