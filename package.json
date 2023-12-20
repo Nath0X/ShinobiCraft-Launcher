@@ -1,7 +1,7 @@
 {
     "name": "ShinobiCraft-Launcher",
     "preductname": "ShinobiCraft Launcher",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Launcher officiel du serveur ShinobiCraft (RP)",
     "main": "src/app.js",
     "author": "Nath0X, Luuxis",
