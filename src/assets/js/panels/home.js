@@ -94,6 +94,7 @@ class Home {
             let ram = (await this.database.get('1234', 'ram')).value;
             let Resolution = (await this.database.get('1234', 'screen')).value;
             let launcherSettings = (await this.database.get('1234', 'launcher')).value;
+            let java_Path = (await this.database.get('1234', 'java-path'))?.value?.path;
 
             let playBtn = document.querySelector('.play-btn');
             let info = document.querySelector(".text-download")
@@ -129,7 +130,7 @@ class Home {
                 verify: this.config.verify,
                 ignored: ['loader', ...this.config.ignored],
 
-                java: true,
+                javaPath: java_Path,
 
                 memory: {
                     min: `${ram.ramMin * 1024}M`,

@@ -252,6 +252,68 @@
     outline: none;
 }
 
+.java-path-input-text {
+    background: var(--shadow);
+    border: none;
+    color: var(--color);
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    width: 50%;
+}
+
+.java-path-input-file {
+    display: none;
+}
+
+.java-path-box {
+    display: flex;
+    align-items: center;
+}
+
+.java-path-btn {
+    padding: 0.3rem 1rem;
+    background: var(--element-color);
+    border-radius: 15px;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.titre-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    background: var(--background-transparent);
+    color: var(--color);
+}
+
+.settings-elements {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.content-evenly {
+    justify-content: space-evenly;
+}
+
+.settings-elements-box {
+    background: var(--background-element);
+    width: 80%;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    margin: 0.5rem;
+}
+
+.setting-text {
+    font-size: 0.8rem;
+}
+
 .path-button {
     font: normal normal bold 13px/20px Poppins;
     border-radius: 18px;

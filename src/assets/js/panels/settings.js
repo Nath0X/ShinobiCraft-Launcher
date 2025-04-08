@@ -19,6 +19,7 @@ class Settings {
         this.initTab();
         this.initAccount();
         this.initRam();
+        this.initJavaPath();
         this.initLauncherSettings();
     }
 
@@ -106,8 +107,9 @@ class Settings {
             });
 
             if (file.value.replace(".exe", '').endsWith("java") || file.value.replace(".exe", '').endsWith("javaw")) {
-                this.database.update({ uuid: "1234", path: file.value }, 'java-path');
-                path.value = file.value.replace(/\\/g, "/");
+                let fileAlt = file.files[0].path;
+                this.database.update({ uuid: "1234", path: fileAlt }, 'java-path');
+                path.value = fileAlt.replace(/\\/g, "/");
             } else alert("Le nom du fichier doit être java ou javaw");
 
         });

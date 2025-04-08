@@ -1,7 +1,7 @@
 {
     "name": "ShinobiCraft-Launcher",
     "preductname": "ShinobiCraft Launcher",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Launcher officiel du serveur ShinobiCraft (RP)",
     "main": "src/app.js",
     "author": "Nath0X, Luuxis",
@@ -21,7 +21,7 @@
     },
     "dependencies": {
         "electron-updater": "^6.1.4",
-        "minecraft-java-core": "^3.8.1",
+        "minecraft-java-core": "^4.0.0",
         "node-fetch": "^2.7.0"
     },
     "devDependencies": {
